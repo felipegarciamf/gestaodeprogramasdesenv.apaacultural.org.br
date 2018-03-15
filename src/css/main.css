@@ -1,0 +1,76 @@
+html,body
+
+{
+
+	margin:0;
+
+	padding:0;
+
+	height:100%;
+
+}
+
+
+
+.login-block
+
+{
+
+	padding:15px;
+
+	border:1px solid #ccc;
+
+	-webkit-border-radius:5px;
+
+	-moz-border-radius:5px;
+
+	border-radius:5px;
+
+	float:none;
+
+}
+
+
+
+.margin-spacer-top-100
+
+{
+
+	margin-top:100px;
+
+}
+
+
+
+label.error
+
+{
+
+	color:#f00;
+
+}
+
+
+
+label.error:after {
+
+   font-family: FontAwesome;
+
+   content: "\f00d";
+
+   margin:0px 0px 0px 5px;
+
+}
+.invisivel{
+	display:none;
+}
+
+.dashboard-central{
+	min-height: 557px;
+	background-image: url('/../../src/img/background-inteiro.jpg');
+	background-repeat: none;
+}
+
+.navbar{
+	background-color:#3c7686;
+}

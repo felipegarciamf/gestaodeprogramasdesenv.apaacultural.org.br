@@ -1,0 +1,61 @@
+@extends('layouts.master')
+
+@section('title')
+	Listagem de Relatórios
+@endsection
+
+@section('content')
+
+<div class="row">
+	<div class="col-md-12 col-sm-12">
+		<div class="table table-resposive">
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Plano</th>
+						<th>Programa</th>
+						<th>Número da Ação</th>
+						<th>Ação</th>
+						<th>Indicador</th>
+						<th>Programa</th>
+						<th>Atividade</th>
+						<th>1º Trimestre</th>
+						<th>2º Trimestre</th>
+						<th>3º Trimestre</th>
+						<th>4º Trimestre</th>
+					</tr>
+				</thead>
+				<tbody>
+
+						@foreach ($acoes as $acao)
+						
+							@foreach ($atividades as $atividade)
+							@if ( $acao->programa->id == $atividade->programa->id)
+							<tr>
+							<td>{{ $acao->plano->nome }}</td>
+							<td>{{ $acao->programa->nome }}</td>
+							<td>{{ $acao->codigo_acao }}</td>
+							<td>{{ $acao->nome }} </td>
+							<td>VAZIO</td>
+							<td>{{ $atividade->programa->nome }}</td>
+							<td>{{ $atividade->nome }}</td>
+							<TD>{{ $atividade->num_total_artistas }}</TD>
+							<TD>TESTE</TD>
+							<TD>TESTE</TD>
+							<TD>TESTE</TD>
+							</tr>
+							@endif
+							@endforeach					
+						@endforeach
+
+							<td>VAZIO</td>
+							<td>VAZIO</td>
+							<td>VAZIO</td>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+
+@endsection

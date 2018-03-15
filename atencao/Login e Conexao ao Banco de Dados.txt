@@ -1,0 +1,83 @@
+ACESSO CPANEL APLICAÇÃO
+
+http://188.93.227.156/cpanel
+
+Username: apaacult
+
+Password: f4olx2M2D2
+
+
+
+ACESSO IBERWEB TICKETS DE ATENDIMENTO:
+
+http://www.iberweb.com.br //nao está funcionando
+
+Usuario: suporteti@apaa.org.br//nao está funcionando
+
+Senha: Apaa@123//nao está funcionando
+
+
+
+ACESSO SSH
+
+Utilizando a chave criada id_rsa  //nao foi testado com o novo ip
+
+ssh -p 58100 apaacult@188.93.227.156 //nao foi testado com o novo ip
+
+Senha: f4olx2M2D2 //nao foi testado com o novo ip
+
+
+
+ACESSO FTP APAA
+
+Host: 188.93.227.156
+
+Usuario: apaacult
+
+Senha:  f4olx2M2D2
+
+
+
+BANCO DE DADOS PRODUÇÃO
+
+Host: 188.93.227.156
+
+base: apaacult_producao
+
+usr: apaacult_prd
+
+pass: kFJUo0*@]QXZ
+
+
+BANCO DE DADOS DESENVOLVIMENTO
+
+Host: 188.93.227.156
+
+base: apaacult_desenvolvimento
+
+usr: apaacult_desenv
+
+pass: kFJUo0*@]QXZ
+
+
+
+
+BANCO DE DADOS HOMOLOG
+
+Host: 188.93.227.156
+
+base: apaacult_homolog
+
+usr: apaacult_homolog
+
+pass: kFJUo0*@]QXZ
+
+
+
+ACESSO A FERRAMENTA COMO USUÁRIO
+
+url: http://188.93.227.156/~apaacult/
+
+usuário: eiglimar.junior@mfconsulting.com.br
+
+senha: ugabuga123

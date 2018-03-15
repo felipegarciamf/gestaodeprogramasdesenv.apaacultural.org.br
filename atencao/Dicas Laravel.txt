@@ -1,0 +1,5 @@
+Criando Servidor para Laravel 
+
+cd c:\Users\Bruno\Meus Documents\Projetos\projeto-em-laravel
+php -S localhost:8000 server.php
+
