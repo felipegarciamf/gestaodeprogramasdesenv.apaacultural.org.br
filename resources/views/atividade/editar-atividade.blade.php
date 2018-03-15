@@ -187,7 +187,7 @@
 					<input type="number" min="0" name="bilheteria" id="bilheteria" class="form-control" value="{{$atividade->bilheteria}}">
 				</div>
 				<div class="form-group">
-					<label for="porcent_bilheteria_apaa">% Bilheteria</label>
+					<label for="porcent_bilheteria_apaa">Bilheteria Apaa</label>
 					<input type="number" min="0" name="porcentagem_bilheteria_apaa" id="porcentagem_bilheteria_apaa" class="form-control" value="{{$atividade->porcent_bilheteria_apaa}}">
 				</div>
 
