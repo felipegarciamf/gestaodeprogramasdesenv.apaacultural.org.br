@@ -37,7 +37,7 @@ class CreateAtividadesTable extends Migration
             $table->integer('atend_social_producao');
             $table->integer('atend_social_apaa');
             $table->boolean('sessao_acessivel');
-            $table->boolean('acessibilidade_acompanhante');
+            $table->integer('acessibilidade_acompanhante');
             $table->decimal('bilheteria',10,2);
             $table->decimal('porcent_bilheteria_apaa',10,2);
             $table->string('artista');

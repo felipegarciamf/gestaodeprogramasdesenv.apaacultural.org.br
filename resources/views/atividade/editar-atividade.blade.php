@@ -179,12 +179,8 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="acessibilidade_acompanhante">Acessibilidade Acompanhante</label>
-					<select class="form-control" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante">
-					    <option  value="">Selecione</option>
-					    <option {{ $atividade->acessibilidade_acompanhante == false ? 'selected' : '' }} value="0">Não</option>
-					    <option {{ $atividade->acessibilidade_acompanhante == true ? 'selected' : '' }} value="1">Sim</option>
-					</select>
+					<label for="acessibilidade_acompanhante">Acessibilidade</label>
+					<input type="number" min="0" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" class="form-control" value="{{$atividade->acessibilidade_acompanhante}}">
 				</div>
 				<div class="form-group">
 					<label for="bilheteria">Bilheteria</label>

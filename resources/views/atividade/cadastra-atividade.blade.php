@@ -160,19 +160,15 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label for="acessibilidade_acompanhante">Acessibilidade Acompanhante</label>
-					<select class="form-control" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante">
-							<option value="">Selecione</option>
-						    <option value="0">Não</option>
-						    <option value="1">Sim</option>
-					</select>
+					<label for="acessibilidade_acompanhante">Acessibilidade</label>
+					<input type="number" min="0" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" value="0" class="form-control">
 				</div>
 				<div class="form-group">
 					<label for="bilheteria">Bilheteria</label>
 					<input type="number" min="0" step="any" value="0" name="bilheteria" id="bilheteria" class="form-control">
 				</div>
 				<div class="form-group">
-					<label for="porcentagem_bilheteria">% Bilheteria</label>
+					<label for="porcentagem_bilheteria">Bilheteria Apaa</label>
 					<input type="number" min="0" step="any" value="0" name="porcentagem_bilheteria" id="porcentagem_bilheteria" class="form-control">
 				</div>
 				
