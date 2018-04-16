@@ -353,20 +353,18 @@
 													</div>
 												</div>
 												{{--*/ $justificativa = round(($porcentagem_1_tri+$porcentagem_2_tri+$porcentagem_3_tri+$porcentagem_4_tri) / 4,2)/*--}}
-																					
-												<form  name="form-justificativa" id="form-justificativa" method="post">
-													<div class="form-group">
-														<label for="descricao">Justificativa</label>
-														<textarea name="justificativa" value="{{ $indicador->justificativa }}" class="form-control" id="justificativa" ></textarea>
-													</div>
+				
 
-													<button type="submit" class="btn btn-primary">Adicionar</button>
-													<!--Necessário para o laravel-->
-													<input type="hidden" name="_token" value="{{ Session::token() }}">
-												</form>
-												
-												
-											
+
+													<div class="form-group">	
+														<label for="justificativa">Justificativa</label>
+														<input disabled type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $campos['justificativa'] }}">
+													</div>	
+													<ul class="list-inline">
+														<li>
+															<a href="{{ route('editar-indicador-justificativa',['id' =>  $campos['indicador_id']]) }}" class="btn btn-warning" target="_blank">Editar</a>
+														</li>
+													</ul>
 											</div>
 
 

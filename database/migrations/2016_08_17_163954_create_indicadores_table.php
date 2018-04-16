@@ -23,6 +23,7 @@ class CreateIndicadoresTable extends Migration
             $table->string('meta_2_tri');
             $table->string('meta_3_tri');
             $table->string('meta_4_tri');
+            $table->string('justificativa');
             $table->timestamps();
              //TODAS DEVEM TER ESSAS
             $table->softDeletes();

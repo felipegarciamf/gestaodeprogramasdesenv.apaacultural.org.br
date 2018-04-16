@@ -13,7 +13,7 @@ Editar Indicador
 			<input type="text" id="urlAjaxAcoesIndicadorEdit" value="{{route('chama-acoes-indicador')}}" hidden>
 			
 			<!-- SILAS, criar regras para edição -->
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="regra">Regra</label>
 				<select class="form-control" name="regra" id="regra">
 					<option value="">Selecione</option>
@@ -33,7 +33,7 @@ Editar Indicador
 			</div>
 
 
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="plano">Plano</label>
 				<select class="form-control" name="plano" id="planos-ajax-indicador-edit">
 					<option value="">Selecione</option>
@@ -46,7 +46,7 @@ Editar Indicador
 					@endforeach
 				</select>
 			</div>
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="acao">Ação</label>
 				<select class="form-control" name="acao" id="acao">
 					<option value="">Selecione</option>
@@ -59,23 +59,23 @@ Editar Indicador
 					@endforeach
 				</select>
 			</div>
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="meta_1_tri">Meta 1º Trimestre</label>
 				<input type="text" name="meta_1_tri" id="meta_1_tri" class="form-control" value="{{ $indicador->meta_1_tri }}">
 			</div>
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="meta_2_tri">Meta 2º Trimestre</label>
 				<input type="text" name="meta_2_tri" id="meta_2_tri" class="form-control" value="{{ $indicador->meta_2_tri }}">
 			</div>
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="meta_3_tri">Meta 3º Trimestre</label>
 				<input type="text" name="meta_3_tri" id="meta_3_tri" class="form-control" value="{{ $indicador->meta_3_tri }}">
 			</div>
-			<div class="form-group">
+			<div hidden class="form-group">
 				<label for="meta_4_tri">Meta 4º Trismestre</label>
 				<input type="text" name="meta_4_tri" id="meta_4_tri" class="form-control" value="{{ $indicador->meta_4_tri }}">
 			</div>
-			<div hidden class="form-group">	
+			<div class="form-group">	
 				<label for="justificativa">Justificativa</label>
 				<input type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
 			</div>
@@ -83,7 +83,7 @@ Editar Indicador
 	
 			<!--Necessário para o laravel-->
 			<input type="hidden" name="_token" value="{{ Session::token() }}">
-			<button type="submit" class="btn btn-primary">Editar</button>
+			<button type="submit" class="btn btn-primary">Cadastrar</button>
 		</form>
 	</div>
 </div>

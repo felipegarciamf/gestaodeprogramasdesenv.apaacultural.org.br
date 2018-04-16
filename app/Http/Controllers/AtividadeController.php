@@ -229,11 +229,12 @@ class AtividadeController extends Controller
 		// puxando csv de relatório
 		//dd(Schema::getColumnListing('atividades'));
 		$csv = Writer::createFromFileObject(new \SplTempFileObject());
-		$csv->insertOne(['Nome', 'Plano', 'Programa', 'Data', 'Data Fim','Horario', 'Artista', 'Municipio', 'Local', 'Numero Pessoas', 'Sessao Acessivel', 'Tipo de Evento', 'Numero de Artistas', 'Realizador']);
-
+		$csv->insertOne(['Nome', 'toto', 'Plano', 'Programa', 'Data', 'Data Fim','Horario', 'Artista', 'Municipio', 'Local', 'Numero Pessoas', 'Sessao Acessivel', 'Tipo de Evento', 'Numero de Artistas', 'Realizador']);
+		
 		foreach($atividades as $atividade){
 		$csv->insertOne($atividade->toArray());
 		}
+
 
 		$csv->output('atividades_'.Carbon::now().'.csv');
 	}

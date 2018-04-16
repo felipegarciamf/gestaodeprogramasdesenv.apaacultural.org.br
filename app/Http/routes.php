@@ -1281,6 +1281,7 @@ Route::group(['prefix' => 'indicador'], function () {
 		'middleware' => 'auth'
 	]);
 
+
 	//deletar indicador
 	Route::get('/delete-indicador/{id}',[
 		'uses' => 'IndicadorController@deleteIndicador',
@@ -1296,6 +1297,12 @@ Route::group(['prefix' => 'indicador'], function () {
 		'middleware' => 'auth'
 	]);
 
+	//editar indicador view justificativa
+	Route::get('/editar-indicador-justificativa/{id}',[
+		'uses' => 'IndicadorController@editJustificativaView',
+		'as' => 'editar-indicador-justificativa',
+		'middleware' => 'auth'
+	]);
 
 
 	//chamar acoes via ajax a partir do id do plano cadastro

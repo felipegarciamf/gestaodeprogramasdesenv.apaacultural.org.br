@@ -25,8 +25,7 @@ use Illuminate\Support\Facades\DB;
 //CARBON É USADO PARA DATETIMES E TAL
 //use Carbon\Carbon;
 
-class RelatorioController extends Controller
-{
+class RelatorioController extends Controller {
     private $atividade;
     private $acao;
     private $programa;
@@ -35,8 +34,7 @@ class RelatorioController extends Controller
     private $regra;
     private $permissoes_usuario;
 
-    public function __construct(Plano $plano,Atividade $atividade, Acao $acao, Programa $programa, Indicador $indicador, Regras $regra, PermissoesUsuario $permissoes_usuario)
-    {
+    public function __construct(Plano $plano,Atividade $atividade, Acao $acao, Programa $programa, Indicador $indicador, Regras $regra, PermissoesUsuario $permissoes_usuario)   {
     	$this->atividade = $atividade;
     	$this->acao = $acao;
     	$this->programa = $programa;
@@ -46,8 +44,7 @@ class RelatorioController extends Controller
         $this->permissoes_usuario = $permissoes_usuario;
     }
 
-    public function editIndicador(Request $request,$id)
-    {
+    public function editIndicador(Request $request,$id)  {
         
             $indicador = $this->indicador->find($id);
 
@@ -68,8 +65,6 @@ class RelatorioController extends Controller
             $indicador->update();
 
             return redirect()->route('relatorio-trimestral');
-       
-     
     }
 
 
@@ -207,6 +202,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -257,6 +254,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -302,6 +301,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -326,6 +327,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -377,6 +380,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     case strtoupper("Número de apresentações realizadas diretamente pela OS"):
@@ -423,6 +428,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     case strtoupper("Número de Municípios até 250 km da Capital"):
@@ -469,6 +476,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -516,6 +525,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
                                     break;
@@ -564,6 +575,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -609,6 +622,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -631,6 +646,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Percentual Mínimo de Municípios presentes"):
@@ -652,6 +669,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas diretamente pela OS (exclui as apresentações para estudantes)"):
@@ -699,6 +718,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas em parceria com os municípios e instituições"):
@@ -720,6 +741,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público nas apresentações realizadas diretamente pela OS"):
@@ -764,6 +787,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     /*ESSE É UM CASO QUE PRECISO TER UM CAMPO ESPECIFICO QUE NO MOMENTO NÃO TEM PARA ESTUDANTES, ESTOU FAZENDO O CALCULO DAS APRESENTACOES NORMAIS*/
@@ -812,6 +837,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -858,6 +885,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -906,6 +935,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -955,6 +986,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1004,6 +1037,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1050,6 +1085,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1098,6 +1135,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1144,6 +1183,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1191,6 +1232,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1238,6 +1281,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1285,6 +1330,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1331,6 +1378,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1355,6 +1404,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -1403,6 +1454,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1449,6 +1502,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1474,6 +1529,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -1495,6 +1552,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     /*Campos de preenchimento aberto no relatorio*/
@@ -1519,6 +1578,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -1540,6 +1601,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Atividades"):
@@ -1552,7 +1615,7 @@ class RelatorioController extends Controller
                                         $ultimaApresentacaoNome = "-1";
                                         foreach($atividades as $atividade)
                                         {
-                                            if($atividade->realizador->id == 1 && $ultimaApresentacaoNome != $atividade->nome && $acao->programa->id == $atividade->programa->id)
+                                            if($atividade->realizador->id == 1  && $acao->programa->id == $atividade->programa->id)
                                             {
                                                 //$totalApresentacoes++;
                                                 $date_mes = date_parse_from_format("Y-m-d", $atividade->data);
@@ -1587,6 +1650,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1633,6 +1698,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1657,6 +1724,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações"):
@@ -1702,6 +1771,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público Circulante no Festival"):
@@ -1749,6 +1820,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1797,6 +1870,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1845,6 +1920,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1894,6 +1971,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1940,6 +2019,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -1964,6 +2045,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper('Soma do "Número total de pessoas" quando o campo "Sessão acessível" igual a "sim"'):
@@ -2010,6 +2093,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
 
@@ -2060,10 +2145,12 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
-                                    case strtoupper("Número de apresentações – Sala Sérgio Cardoso"):
+                                    case strtoupper("Número de apresentações"):
 
                                         //$numApresentacoes = 0;
                                         $alcancado_1_tri = 0;
@@ -2106,6 +2193,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -2130,6 +2219,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Sala Paschoal Carlos Magno"):
@@ -2175,6 +2266,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Festival Paulista de Circo"):
@@ -2220,6 +2313,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -2246,6 +2341,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                 }
@@ -2280,8 +2377,8 @@ class RelatorioController extends Controller
 
 
         // mostra view da escolha de planos mensais
-    public function PlanosRelatorioMensal()
-    {	if(Auth::user()->perfil == 2)
+    public function PlanosRelatorioMensal()    {	
+        if(Auth::user()->perfil == 2)
         {
         	$planos = $this->plano->orderBy('created_at','DESC')->get();
         	return view('relatorio.planos-relatorio-mensal',['planos' => $planos]);
@@ -2292,8 +2389,7 @@ class RelatorioController extends Controller
         }
     }
         // mostra view da escolha de planos trimestrais
-    public function PlanosRelatorioTrimestral()
-    {
+    public function PlanosRelatorioTrimestral()   {
 
         if(Auth::user()->perfil == 2)
         {
@@ -2337,8 +2433,7 @@ class RelatorioController extends Controller
 
 
         // cria regras de calculo para relatório mensal
-    public function RelatorioMensal($id)
-    {
+    public function RelatorioMensal($id) {
 
     	if(Auth::user()->perfil == 2)
         {
@@ -2518,8 +2613,7 @@ class RelatorioController extends Controller
 
 
     // cria regra de calculo para relatório trimestral
-    public function RelatorioTrimestral(Request $request, $id)
-    {
+    public function RelatorioTrimestral(Request $request, $id)  {
 
         if(Auth::user()->perfil == 2)
         {
@@ -2622,6 +2716,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -2685,6 +2781,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
     				    				$campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
         							break;
 
@@ -2735,6 +2833,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
         							break;
 
@@ -2780,6 +2880,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
         							break;
 
@@ -2804,6 +2906,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -2855,6 +2959,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
         							break;
                                     case strtoupper("Número de apresentações realizadas diretamente pela OS"):
@@ -2901,6 +3007,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     case strtoupper("Número de Municípios até 250 km da Capital"):
@@ -2947,6 +3055,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -2994,6 +3104,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
                                     break;
@@ -3042,6 +3154,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3087,6 +3201,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3109,6 +3225,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Percentual Mínimo de Municípios presentes"):
@@ -3130,6 +3248,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas diretamente pela OS (exclui as apresentações para estudantes)"):
@@ -3177,6 +3297,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas em parceria com os municípios e instituições"):
@@ -3198,6 +3320,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público nas apresentações realizadas diretamente pela OS"):
@@ -3242,6 +3366,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     /*ESSE É UM CASO QUE PRECISO TER UM CAMPO ESPECIFICO QUE NO MOMENTO NÃO TEM PARA ESTUDANTES, ESTOU FAZENDO O CALCULO DAS APRESENTACOES NORMAIS*/
@@ -3290,6 +3416,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3336,6 +3464,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3384,6 +3514,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3433,6 +3565,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3482,6 +3616,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3528,6 +3664,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3576,6 +3714,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3622,6 +3762,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3669,6 +3811,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3716,6 +3860,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3763,6 +3909,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3809,6 +3957,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3833,6 +3983,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -3881,6 +4033,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3927,6 +4081,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -3952,6 +4108,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -3973,6 +4131,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     /*Campos de preenchimento aberto no relatorio*/
@@ -3997,6 +4157,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -4018,6 +4180,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Atividades"):
@@ -4030,7 +4194,7 @@ class RelatorioController extends Controller
                                         $ultimaApresentacaoNome = "-1";
                                         foreach($atividades as $atividade)
                                         {
-                                            if($atividade->realizador->id == 1 && $ultimaApresentacaoNome != $atividade->nome && $acao->programa->id == $atividade->programa->id)
+                                            if($atividade->realizador->id == 1  && $acao->programa->id == $atividade->programa->id)
                                             {
                                                 //$totalApresentacoes++;
                                                 $date_mes = date_parse_from_format("Y-m-d", $atividade->data);
@@ -4065,6 +4229,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4111,6 +4277,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4135,6 +4305,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações"):
@@ -4180,6 +4354,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público Circulante no Festival"):
@@ -4227,6 +4405,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4275,6 +4457,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4323,6 +4509,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4372,6 +4562,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4418,6 +4612,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4442,6 +4640,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper('Soma do "Número total de pessoas" quando o campo "Sessão acessível" igual a "sim"'):
@@ -4488,6 +4690,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
 
@@ -4538,6 +4744,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4584,6 +4794,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4608,6 +4822,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Sala Paschoal Carlos Magno"):
@@ -4653,6 +4871,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Festival Paulista de Circo"):
@@ -4698,6 +4920,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                        $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                        $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4724,6 +4950,10 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                        $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                        $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
         						}
@@ -4860,6 +5090,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4923,6 +5155,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -4973,6 +5207,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5018,6 +5254,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5042,6 +5280,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -5093,6 +5333,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     case strtoupper("Número de apresentações realizadas diretamente pela OS"):
@@ -5139,6 +5381,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     case strtoupper("Número de Municípios até 250 km da Capital"):
@@ -5185,6 +5429,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5232,6 +5478,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
                                     break;
@@ -5280,6 +5528,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5325,6 +5575,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5347,6 +5599,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Percentual Mínimo de Municípios presentes"):
@@ -5368,6 +5622,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas diretamente pela OS (exclui as apresentações para estudantes)"):
@@ -5415,6 +5671,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações realizadas em parceria com os municípios e instituições"):
@@ -5436,6 +5694,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público nas apresentações realizadas diretamente pela OS"):
@@ -5480,6 +5740,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
                                     /*ESSE É UM CASO QUE PRECISO TER UM CAMPO ESPECIFICO QUE NO MOMENTO NÃO TEM PARA ESTUDANTES, ESTOU FAZENDO O CALCULO DAS APRESENTACOES NORMAIS*/
@@ -5528,6 +5790,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5574,6 +5838,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5622,6 +5888,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5671,6 +5939,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5720,6 +5990,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5766,6 +6038,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5814,6 +6088,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5860,6 +6136,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5907,6 +6185,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -5954,6 +6234,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6001,6 +6283,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6047,6 +6331,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6071,6 +6357,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
 
@@ -6119,6 +6407,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6165,6 +6455,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6190,6 +6482,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -6211,6 +6505,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     /*Campos de preenchimento aberto no relatorio*/
@@ -6235,6 +6531,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Vagas"):
@@ -6256,6 +6554,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Atividades"):
@@ -6268,7 +6568,7 @@ class RelatorioController extends Controller
                                         $ultimaApresentacaoNome = "-1";
                                         foreach($atividades as $atividade)
                                         {
-                                            if($atividade->realizador->id == 1 && $ultimaApresentacaoNome != $atividade->nome && $acao->programa->id == $atividade->programa->id)
+                                            if($atividade->realizador->id == 1  && $acao->programa->id == $atividade->programa->id)
                                             {
                                                 //$totalApresentacoes++;
                                                 $date_mes = date_parse_from_format("Y-m-d", $atividade->data);
@@ -6303,6 +6603,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6349,6 +6651,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6373,6 +6677,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de Apresentações"):
@@ -6418,6 +6724,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número Total de Público Circulante no Festival"):
@@ -6465,6 +6773,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6513,6 +6823,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6561,6 +6873,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6610,6 +6924,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6656,6 +6972,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6680,6 +6998,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper('Soma do "Número total de pessoas" quando o campo "Sessão acessível" igual a "sim"'):
@@ -6726,6 +7046,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
 
 
@@ -6776,6 +7098,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                        $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                        $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6822,6 +7146,9 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6846,6 +7173,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Sala Paschoal Carlos Magno"):
@@ -6891,6 +7220,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                     case strtoupper("Número de apresentações – Festival Paulista de Circo"):
@@ -6936,6 +7267,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                         $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                         $campos[$countCampos]["indicador_id"] = $indicador->id;
 
                                     break;
 
@@ -6962,6 +7295,8 @@ class RelatorioController extends Controller
                                         $campos[$countCampos]["meta_2_tri"] = $indicador->meta_2_tri;
                                         $campos[$countCampos]["meta_3_tri"] = $indicador->meta_3_tri;
                                         $campos[$countCampos]["meta_4_tri"] = $indicador->meta_4_tri;
+                                        $campos[$countCampos]["justificativa"] = $indicador->justificativa;
+                                        $campos[$countCampos]["indicador_id"] = $indicador->id;
                                     break;
 
                                 }
@@ -6989,7 +7324,7 @@ class RelatorioController extends Controller
             //die();
             $programas = $this->programa->name($request->get('nome'))->where('plano_id',$id)->whereIn('id',$programas_id)->orderBy('created_at','desc')->get();
         }
-            return view('relatorio.relatorio-trimestral', ['indicador' => $indicador,'acoes' => $acoes,'arrayInfo' => $arrayInfo, 'regras' => $regras, 'programas' => $programas]);
+            return view('relatorio.relatorio-trimestral', ['indicador' => $indicador,'acoes' => $acoes,'arrayInfo' => $arrayInfo, 'regras' => $regras, 'planos' => $planos, 'programas' => $programas]);
     }
 
 

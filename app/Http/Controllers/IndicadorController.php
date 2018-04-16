@@ -67,8 +67,7 @@ class IndicadorController extends Controller
         }
     }
 
-    public function listarIndicador(Request $request)
-    {
+    public function listarIndicador(Request $request)     {
         if(Auth::user()->perfil == 2)
         {
            // $indicadores = $this->indicador->name($request->get('regra_id'))->orderBy('regra.descricao','DESC')->get();
@@ -99,6 +98,7 @@ class IndicadorController extends Controller
             $indicador->meta_2_tri = $request["meta_2_tri"];
             $indicador->meta_3_tri = $request["meta_3_tri"];
             $indicador->meta_4_tri = $request["meta_4_tri"];
+            $indicador->justificativa = $request["justificativa"];
 
             $indicador->created_by = Auth::user()->id;
 
@@ -131,6 +131,24 @@ class IndicadorController extends Controller
         }
     }
 
+
+    public function editJustificativaView($id)
+    {
+        if(Auth::user()->perfil == 2)
+        {
+            $indicador = $this->indicador->find($id);
+            $regra = $this->regra->orderBy('created_at', 'DESC')->get();
+            $acoes = $this->acao->where('plano_id',$indicador->plano->id)->get();
+            $planos = $this->plano->orderBy('created_at','DESC')->get();
+            
+            return view('indicador.editar-indicador-justificativa',['indicador' => $indicador,'regra' => $regra ,'planos' => $planos,'acoes' => $acoes]);
+        }
+        else
+        {
+            return redirect()->route('dashboard');
+        }
+    }
+
     public function editIndicador(Request $request,$id)
     {
         if(Auth::user()->perfil == 2)
@@ -146,6 +164,7 @@ class IndicadorController extends Controller
             $indicador->meta_2_tri = $request["meta_2_tri"];
             $indicador->meta_3_tri = $request["meta_3_tri"];
             $indicador->meta_4_tri = $request["meta_4_tri"];
+            $indicador->justificativa = $request["justificativa"];
 
             $indicador->changed_by = Auth::user()->id;
 
@@ -158,6 +177,38 @@ class IndicadorController extends Controller
             return redirect()->route('dashboard');
         }
     }
+
+    public function editIndicadorRelatorio(Request $request,$id)
+    {
+        if(Auth::user()->perfil == 2)
+        {
+            $indicador = $this->indicador->find($id);
+
+
+            $indicador->regra_id = intval($request["regras"]);
+            $indicador->nome_indicador = $request["nome_indicador"];
+            $indicador->plano_id = intval($request["plano"]);
+            $indicador->acao_id = intval($request["acao"]);
+            $indicador->meta_1_tri = $request["meta_1_tri"];
+            $indicador->meta_2_tri = $request["meta_2_tri"];
+            $indicador->meta_3_tri = $request["meta_3_tri"];
+            $indicador->meta_4_tri = $request["meta_4_tri"];
+            $indicador->justificativa = $request["justificativa"];
+
+            $indicador->changed_by = Auth::user()->id;
+
+            $indicador->update();
+
+            return redirect()->route('relatorio.relatorio-trimestral');
+        }
+        else
+        {
+            return redirect()->route('dashboard');
+        }
+    }
+
+
+
 
     public function deleteIndicador($id)
     {
