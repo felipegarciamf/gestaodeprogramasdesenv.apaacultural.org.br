@@ -18,7 +18,10 @@
 		{{ Form::text('nome', null, ['class' => 'form-control', 'placeholder' => 'Nome da Atividade']) }}
 	</div>
 	<div class="form-group">
-		{{ Form::text('data', null,['class' => 'form-control', 'placeholder' => 'Data Inicial']) }}
+		{{ Form::text('dataini', null,['class' => 'form-control', 'placeholder' => 'Data Inicial']) }}
+	</div>
+	<div class="form-group">
+		{{ Form::text('datafim', null,['class' => 'form-control', 'placeholder' => 'Data Final']) }}
 	</div>
 
 	<div class="form-group">

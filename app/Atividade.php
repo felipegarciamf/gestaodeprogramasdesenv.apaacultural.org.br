@@ -66,11 +66,18 @@ class Atividade extends Model
             $query->where('atividades.nome','like' ,'%' . $name .'%' );
         }
     }
-    public function scopeDate($query, $date)
+    public function scopeDateIni($query, $date)
     {
         if(trim($date) != "")
         {
-            $query->where('atividades.data', 'Like', '%' . $date . '%');
+            $query->where('atividades.data', '>=',  $date);
+        }
+    }
+    public function scopeDateFim($query, $date)
+    {
+        if(trim($date) != "")
+        {
+            $query->where('atividades.data', '<=', $date);
         }
     }
 

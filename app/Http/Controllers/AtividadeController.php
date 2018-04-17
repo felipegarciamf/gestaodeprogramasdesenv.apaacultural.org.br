@@ -203,10 +203,12 @@ class AtividadeController extends Controller
 	public function listarRelatorioProgramasAtividade(Request $request)
 	{
 
-		$atividades = $this->atividade->date($request->get('data'))
+		$atividades = $this->atividade
+		->dateIni($request->get('dataini'))
+		->dateFim($request->get('datafim'))
 		->name($request->get('nome'))
 		->municipio($request->get('municipio'))
-		->orderBy('plano_id','DESC')->get();
+		->orderBy('data','ASC')->get();
 
 		//dd($atividades);
 
