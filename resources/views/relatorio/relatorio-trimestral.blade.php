@@ -10,6 +10,12 @@
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/css/ionicons/css/ionicons.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/css/jquery-ui/jquery-ui.min.css')}}">
+<style media="print">
+	.botao{
+		display:none;
+	}
+</style>
+
     <style>
     	
 		.row-table-master
@@ -70,6 +76,10 @@
 			width:50px;
 			height:20px;
 		}
+		.row{
+			page-break-inside:avoid;
+			margin-left: 2px;
+		}
 
     </style>
 </head>
@@ -89,7 +99,7 @@
 						<div class="col-md-12">
 							<h1 class="page-header">Programa {{$acao->programa->nome}}</h1>
 						</div>
-					</div>
+				
 
 
 
@@ -360,7 +370,7 @@
 														<label for="justificativa">Justificativa</label>
 														<input disabled type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $campos['justificativa'] }}">
 													</div>	
-													<ul class="list-inline">
+													<ul class="list-inline botao">
 														<li>
 															<a href="{{ route('editar-indicador-justificativa',['id' =>  $campos['indicador_id']]) }}" class="btn btn-warning" target="_blank">Editar</a>
 														</li>
@@ -373,6 +383,7 @@
 
 							@endif
 						</div>
+					</div>
 					</div>
 					<!-- Fim da linha por cada ação -->
 				@endif
