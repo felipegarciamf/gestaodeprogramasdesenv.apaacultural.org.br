@@ -224,14 +224,14 @@ class AtividadeController extends Controller
 			->join('municipios', 'municipios.id', '=', 'atividades.municipio_id')
 			->join('tipo_eventos','tipo_eventos.id','=','atividades.tipo_evento_id')
 			->join('realizadores', 'realizadores.id','=','atividades.realizador_id')
-			->select('atividades.nome as nome_atividade', 'planos.nome as nome_plano','programas.nome as programa_nome','atividades.data', 'atividades.data_fim','atividades.horario', 'atividades.artista', 'municipios.nome as municipio_nome', 'atividades.local', 'atividades.num_total_pessoas', 'atividades.sessao_acessivel', 'tipo_eventos.nome as nome_evento','atividades.num_total_artistas', 'realizadores.nome as realizador_nome')
+			->select('atividades.nome as nome_atividade', 'planos.nome as nome_plano','programas.nome as programa_nome','atividades.data', 'atividades.data_fim','atividades.horario', 'atividades.artista', 'municipios.nome as municipio_nome', 'atividades.local', 'atividades.num_total_pessoas', 'tipo_eventos.nome as nome_evento','atividades.num_total_artistas', 'realizadores.nome as realizador_nome')
 			->orderBy( 'atividades.plano_id', 'DESC')->get();
 
 
 		// puxando csv de relatório
 		//dd(Schema::getColumnListing('atividades'));
 		$csv = Writer::createFromFileObject(new \SplTempFileObject());
-		$csv->insertOne(['Nome', 'toto', 'Plano', 'Programa', 'Data', 'Data Fim','Horario', 'Artista', 'Municipio', 'Local', 'Numero Pessoas', 'Sessao Acessivel', 'Tipo de Evento', 'Numero de Artistas', 'Realizador']);
+		$csv->insertOne(['Nome','Plano', 'Programa', 'Data', 'Data Fim','Horario', 'Artista', 'Municipio', 'Local', 'Numero Pessoas', 'Tipo de Evento', 'Numero de Artistas', 'Realizador']);
 		
 		foreach($atividades as $atividade){
 		$csv->insertOne($atividade->toArray());
