@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/css/main.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/css/jquery-ui/jquery-ui.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{URL::to('src/js/clockpicker/clockpicker.css')}}">
+
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -76,6 +77,8 @@
 	<script src="{{URL::to('src/js/jquery-validation/dist/jquery.validate.min.js')}}"></script>
 	<script src="{{URL::to('src/js/jquery-validation/dist/validation-forms.js')}}"></script>
   <script src="{{URL::to('src/js/jquery-ui.min.js')}}"></script>
+  <script src="jquery.maskMoney.js" type="text/javascript"></script>
+
 </body>
 </html>
 

@@ -103,7 +103,7 @@
 
 
 
-					<div class="row row-table-master">
+					<div class="row-table-master">
 						<div class="col-md-1 col-table-master-cell">
 							<div style="border:1px solid #000;width:100%;">
 								<b>Número da Ação</b>
