@@ -99,6 +99,7 @@ class IndicadorController extends Controller
             $indicador->meta_3_tri = $request["meta_3_tri"];
             $indicador->meta_4_tri = $request["meta_4_tri"];
             $indicador->justificativa = $request["justificativa"];
+            $indicador->justificativa2 = $request["justificativa2"];
 
             $indicador->created_by = Auth::user()->id;
 
@@ -149,6 +150,23 @@ class IndicadorController extends Controller
         }
     }
 
+    public function editJustificativa2View($id)
+    {
+        if(Auth::user()->perfil == 2)
+        {
+            $indicador = $this->indicador->find($id);
+            $regra = $this->regra->orderBy('created_at', 'DESC')->get();
+            $acoes = $this->acao->where('plano_id',$indicador->plano->id)->get();
+            $planos = $this->plano->orderBy('created_at','DESC')->get();
+            
+            return view('indicador.editar-indicador-justificativa2',['indicador' => $indicador,'regra' => $regra ,'planos' => $planos,'acoes' => $acoes]);
+        }
+        else
+        {
+            return redirect()->route('dashboard');
+        }
+    }
+
     public function editIndicador(Request $request,$id)
     {
         if(Auth::user()->perfil == 2)
@@ -165,6 +183,7 @@ class IndicadorController extends Controller
             $indicador->meta_3_tri = $request["meta_3_tri"];
             $indicador->meta_4_tri = $request["meta_4_tri"];
             $indicador->justificativa = $request["justificativa"];
+            $indicador->justificativa2 = $request["justificativa2"];
 
             $indicador->changed_by = Auth::user()->id;
 
@@ -194,6 +213,7 @@ class IndicadorController extends Controller
             $indicador->meta_3_tri = $request["meta_3_tri"];
             $indicador->meta_4_tri = $request["meta_4_tri"];
             $indicador->justificativa = $request["justificativa"];
+             $indicador->justificativa2 = $request["justificativa2"];
 
             $indicador->changed_by = Auth::user()->id;
 

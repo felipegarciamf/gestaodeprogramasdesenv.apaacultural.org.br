@@ -375,6 +375,16 @@
 															<a href="{{ route('editar-indicador-justificativa',['id' =>  $campos['indicador_id']]) }}" class="btn btn-warning" target="_blank">Editar</a>
 														</li>
 													</ul>
+
+													<div class="form-group">	
+														<label for="justificativa2">Justificativa 2</label>
+														<input disabled type="text" name="justificativa2" id="justificativa2" class="form-control" value="{{ $campos['justificativa2'] }}">
+													</div>	
+													<ul class="list-inline botao">
+														<li>
+															<a href="{{ route('editar-indicador-justificativa2',['id' =>  $campos['indicador_id']]) }}" class="btn btn-warning" target="_blank">Editar</a>
+														</li>
+													</ul>
 											</div>
 
 

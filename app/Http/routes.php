@@ -1304,6 +1304,13 @@ Route::group(['prefix' => 'indicador'], function () {
 		'middleware' => 'auth'
 	]);
 
+		//editar indicador view justificativa
+	Route::get('/editar-indicador-justificativa2/{id}',[
+		'uses' => 'IndicadorController@editJustificativa2View',
+		'as' => 'editar-indicador-justificativa2',
+		'middleware' => 'auth'
+	]);
+
 
 	//chamar acoes via ajax a partir do id do plano cadastro
 	Route::post('/chama-acoes-indicador',[

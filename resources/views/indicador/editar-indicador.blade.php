@@ -79,6 +79,10 @@ Editar Indicador
 				<label for="justificativa">Justificativa</label>
 				<input type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
 			</div>
+			<div hidden class="form-group">	
+				<label for="justificativa2">Justificativa 2</label>
+				<input type="text" name="justificativa2" id="justificativa2" class="form-control" value="{{ $indicador->justificativa2 }}">
+			</div>
 
 	
 			<!--Necessário para o laravel-->

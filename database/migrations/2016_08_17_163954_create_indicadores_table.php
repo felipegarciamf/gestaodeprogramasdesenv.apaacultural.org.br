@@ -24,6 +24,7 @@ class CreateIndicadoresTable extends Migration
             $table->string('meta_3_tri');
             $table->string('meta_4_tri');
             $table->string('justificativa');
+            $table->string('justificativa2');
             $table->timestamps();
              //TODAS DEVEM TER ESSAS
             $table->softDeletes();

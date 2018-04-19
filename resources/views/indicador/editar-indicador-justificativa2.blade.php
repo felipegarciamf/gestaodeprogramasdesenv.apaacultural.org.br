@@ -75,11 +75,11 @@ Editar Indicador
 				<label for="meta_4_tri">Meta 4º Trismestre</label>
 				<input type="text" name="meta_4_tri" id="meta_4_tri" class="form-control" value="{{ $indicador->meta_4_tri }}">
 			</div>
-			<div class="form-group">	
+			<div hidden class="form-group">	
 				<label for="justificativa">Justificativa</label>
 				<input type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
 			</div>
-			<div hidden class="form-group">	
+			<div class="form-group">	
 				<label for="justificativa2">Justificativa 2</label>
 				<input type="text" name="justificativa2" id="justificativa2" class="form-control" value="{{ $indicador->justificativa2 }}">
 			</div>
