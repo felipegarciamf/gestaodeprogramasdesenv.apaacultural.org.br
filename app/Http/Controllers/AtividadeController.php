@@ -184,7 +184,7 @@ class AtividadeController extends Controller
 
 		// name(request) esta buscando o nome e encaminhando a query para página
 		$atividades = $this->atividade
-		->date($request->get('data'))
+		->dateini($request->get('data'))
 		->name($request->get('nome'))
 		->where('programa_id',$id)
 		->municipio($request->get('municipio'))->get();
