@@ -72,12 +72,13 @@
   <script src="{{URL::to('src/js/clockpicker/clockpicker.js')}}"></script>
 	<script src="{{URL::to('src/js/app.min.js')}}"></script>
 	<script src="{{URL::to('src/js/app.js')}}"></script>
+  <script src="{{URL::to('src/js/jquery.maskMoney.min.js')}}"></script>
+  <script src="{{URL::to('src/js/mascara.js')}}"></script>
 
 	<!-- JQuery Validation -->
 	<script src="{{URL::to('src/js/jquery-validation/dist/jquery.validate.min.js')}}"></script>
 	<script src="{{URL::to('src/js/jquery-validation/dist/validation-forms.js')}}"></script>
-  <script src="{{URL::to('src/js/jquery-ui.min.js')}}"></script>
-  <script src="jquery.maskMoney.js" type="text/javascript"></script>
+  <script src="{{URL::to('src/js/jquery-ui.min.js')}}"></script>  
 
 </body>
 </html>

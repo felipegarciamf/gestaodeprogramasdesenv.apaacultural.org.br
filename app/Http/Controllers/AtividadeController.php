@@ -100,7 +100,7 @@ class AtividadeController extends Controller
 
 	public function listarAtividade(Request $request)
 	{
-		$atividades = $this->atividade->date($request->get('data'))->name($request->get('nome'))->municipio($request->get('municipio'))->get();
+		$atividades = $this->atividade->dateIni($request->get('data'))->name($request->get('nome'))->municipio($request->get('municipio'))->get();
 		//transforma formato da data para o brazuka para mostrar na view
 		foreach ($atividades as $atividade) {
 		 $date = DateTime::createFromFormat("Y-m-d H:i:s",$atividade->data);

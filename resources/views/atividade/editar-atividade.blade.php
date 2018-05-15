@@ -184,7 +184,7 @@
 				</div>
 				<div class="form-group">
 					<label for="bilheteria">Bilheteria</label>
-					<input type="number" min="0" name="bilheteria" id="bilheteria" class="form-control" value="{{$atividade->bilheteria}}">
+					<input type="number"  value="{{$atividade->bilheteria}}"  pattern="[0-9]+([,\.][0-9]+)?" step="any"  min="0"  name="bilheteria" id="bilheteria" class="form-control" >
 				</div>
 				<div class="form-group">
 					<label for="porcent_bilheteria_apaa">Bilheteria Apaa</label>

@@ -119,7 +119,7 @@
 				</div>
 				<div class="form-group">
 					<label for="bilheteria">Bilheteria</label>
-					<input type="number" min="0" name="bilheteria" id="bilheteria" class="form-control" value="{{$atividade->bilheteria}}">
+					<input onkeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)" maxlength="22" type="text" name="bilheteria" id="bilheteria" class="form-control" value="{{$atividade->bilheteria}}">
 				</div>
 				<div class="form-group">
 					<label for="porcent_bilheteria_apaa">% Bilheteria</label>

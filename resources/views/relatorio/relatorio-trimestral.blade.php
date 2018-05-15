@@ -368,7 +368,10 @@
 
 													<div class="form-group">	
 														<label for="justificativa">Justificativa</label>
-														<input disabled type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $campos['justificativa'] }}">
+														<textarea disabled type="text" name="justificativa" id="justificativa" class="form-control" style="overflow: hidden; height:150px; resize: none;"" maxlength="2000" >
+															{{ $campos['justificativa'] }}
+
+														</textarea>
 													</div>	
 													<ul class="list-inline botao">
 														<li>
@@ -378,7 +381,9 @@
 
 													<div class="form-group">	
 														<label for="justificativa2">Justificativa 2</label>
-														<input disabled type="text" name="justificativa2" id="justificativa2" class="form-control" value="{{ $campos['justificativa2'] }}">
+														<textarea disabled type="text" style="overflow: hidden; height:150px; resize: none;" name="justificativa2" id="justificativa2" class="form-control" maxlength="2000">
+															{{ $campos['justificativa2'] }}
+														</textarea>
 													</div>	
 													<ul class="list-inline botao">
 														<li>

@@ -77,7 +77,8 @@ Editar Indicador
 			</div>
 			<div class="form-group">	
 				<label for="justificativa">Justificativa</label>
-				<input type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
+				<textarea style="height:150px" type="text" name="justificativa" id="justificativa" class="form-control">{{ $indicador->justificativa }}
+				</textarea>
 			</div>
 			<div hidden class="form-group">	
 				<label for="justificativa2">Justificativa 2</label>

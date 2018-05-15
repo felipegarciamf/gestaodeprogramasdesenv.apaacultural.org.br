@@ -77,11 +77,12 @@ Editar Indicador
 			</div>
 			<div hidden class="form-group">	
 				<label for="justificativa">Justificativa</label>
-				<input type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
+				<input style="height:150px" type="text" name="justificativa" id="justificativa" class="form-control" value="{{ $indicador->justificativa }}">
 			</div>
 			<div class="form-group">	
 				<label for="justificativa2">Justificativa 2</label>
-				<input type="text" name="justificativa2" id="justificativa2" class="form-control" value="{{ $indicador->justificativa2 }}">
+				<textarea style="height:150px" type="text" name="justificativa2" id="justificativa2" class="form-control">{{$indicador->justificativa2}}
+				</textarea>
 			</div>
 
 	
