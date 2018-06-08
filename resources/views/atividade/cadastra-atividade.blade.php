@@ -35,11 +35,11 @@ Cadastro de Atividade
 			</div>
 			<div class="form-group">
 				<label for="capacidade">Capacidade</label>
-				<input type="number" min="0" name="capacidade" id="capacidade" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="capacidade" id="capacidade" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="num_total_pessoas">Nº Total de Pessoas</label>
-				<input type="number" min="0" name="num_total_pessoas" id="num_total_pessoas" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_pessoas" id="num_total_pessoas" value="0" class="form-control">
 			</div>
 
 			<div class="form-group">
@@ -65,11 +65,11 @@ Cadastro de Atividade
 
 			<div class="form-group">
 				<label for="num_total_tecnicos">Nº Total de Técnicos</label>
-				<input type="number" min="0" name="num_total_tecnicos" id="num_total_tecnicos" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_tecnicos" id="num_total_tecnicos" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="num_total_artistas">Nº Total de Artistas</label>
-				<input type="number" min="0" name="num_total_artistas" id="num_total_artistas" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_artistas" id="num_total_artistas" value="0" class="form-control">
 			</div>
 
 			<div class="form-group">
@@ -109,47 +109,47 @@ Cadastro de Atividade
 
 			<div class="form-group">
 				<label for="inteiras">Inteiras</label>
-				<input type="number" min="0" name="inteiras" id="inteiras" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="inteiras" id="inteiras" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="meias">Meias</label>
-				<input type="number" min="0" name="meias" id="meias" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="meias" id="meias" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="moradores_entorno">Moradores do Entorno</label>
-				<input type="number" min="0" name="moradores_entorno" id="moradores_entorno" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="moradores_entorno" id="moradores_entorno" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="prom">Prom</label>
-				<input type="number" min="0" name="prom" id="prom" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="prom" id="prom" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="total_pagantes">Total Pagantes</label>
-				<input type="number" min="0" name="total_pagantes" id="total_pagantes" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="total_pagantes" id="total_pagantes" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="convites_prod">Convites Produção</label>
-				<input type="number" min="0" name="convites_prod" id="convites_prod" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="convites_prod" id="convites_prod" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="convites_apaa">Convites Apaa</label>
-				<input type="number" min="0" name="convites_apaa" id="convites_apaa" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="convites_apaa" id="convites_apaa" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="educativo_producao">Educativo Produção</label>
-				<input type="number" min="0" name="educativo_producao" id="educativo_producao" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="educativo_producao" id="educativo_producao" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="educativo_apaa">Educativo Apaa</label>
-				<input type="number" min="0" name="educativo_apaa" id="educativo_apaa" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="educativo_apaa" id="educativo_apaa" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="atend_social_producao">Atendimento Social Produção</label>
-				<input type="number" min="0" value="0"name="atend_social_producao" id="atend_social_producao" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" value="0"name="atend_social_producao" id="atend_social_producao" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="atend_social_apaa">Atendimento Social Apaa</label>
-				<input type="number" min="0" name="atend_social_apaa" id="atend_social_apaa" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="atend_social_apaa" id="atend_social_apaa" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="sessao_acessivel">Sessão Acessível</label>
@@ -161,15 +161,15 @@ Cadastro de Atividade
 			</div>
 			<div class="form-group">
 				<label for="acessibilidade_acompanhante">Acessibilidade</label>
-				<input type="number" min="0" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" value="0" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" value="0" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="bilheteria">Bilheteria</label>
-				<input onkeydown="FormataMoeda(this,10,event)" onkeypress="return maskKeyPress(event)" maxlength="22" type="text" step="any" value="0" name="bilheteria" id="bilheteria" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" step="any" value="0" name="bilheteria" id="bilheteria" class="form-control">
 			</div>
 			<div class="form-group">
 				<label for="porcentagem_bilheteria">Bilheteria Apaa</label>
-				<input type="number" min="0" step="any" value="0" name="porcentagem_bilheteria" id="porcentagem_bilheteria" class="form-control">
+				<input type="text" onkeyup="this.value=adicionarPonto(this);" step="any" value="0" name="porcentagem_bilheteria" id="porcentagem_bilheteria" class="form-control">
 			</div>
 
 

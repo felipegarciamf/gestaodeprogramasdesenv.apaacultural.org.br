@@ -368,7 +368,7 @@
 
 													<div class="form-group">	
 														<label for="justificativa">Justificativa</label>
-														<textarea disabled type="text" name="justificativa" id="justificativa" class="form-control" style="overflow: hidden; height:255px; resize: none;"" maxlength="1000" >{{ $campos['justificativa'] }}
+														<textarea disabled type="text" name="justificativa" id="justificativa" class="form-control" style="overflow: hidden; height:300px; resize: none;"" maxlength="1000" >{{ $campos['justificativa'] }}
 
 														</textarea>
 													</div>	
@@ -380,7 +380,7 @@
 
 													<div class="form-group">	
 														<label for="justificativa2">Justificativa 2</label>
-														<textarea disabled type="text" style="overflow: hidden; height:255px; resize: none;" name="justificativa2" id="justificativa2" class="form-control" maxlength="1000">{{ $campos['justificativa2'] }}
+														<textarea disabled type="text" style="overflow: hidden; height:300px; resize: none;" name="justificativa2" id="justificativa2" class="form-control" maxlength="1000">{{ $campos['justificativa2'] }}
 														</textarea>
 													</div>	
 													<ul class="list-inline botao">
