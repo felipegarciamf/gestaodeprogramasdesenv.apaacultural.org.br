@@ -36,11 +36,11 @@
 				</div>
 				<div class="form-group">
 					<label for="capacidade">Capacidade</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="capacidade" id="capacidade" class="form-control" value="{{$atividade->capacidade}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="capacidade" id="capacidade" class="form-control" value="{{$atividade->capacidade}}">
 				</div>
 				<div class="form-group">
 					<label for="num_total_pessoas">Nº Total de Pessoas</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_pessoas" id="num_total_pessoas" class="form-control" value="{{$atividade->num_total_pessoas}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="num_total_pessoas" id="num_total_pessoas" class="form-control" value="{{$atividade->num_total_pessoas}}">
 				</div>
 				<div class="form-group">
 					<label for="linguagem">Linguagem</label>
@@ -72,11 +72,11 @@
 
 				<div class="form-group">
 					<label for="num_total_tecnicos">Nº Total de Técnicos</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_tecnicos" id="num_total_tecnicos" class="form-control" value="{{$atividade->num_total_tecnicos}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="num_total_tecnicos" id="num_total_tecnicos" class="form-control" value="{{$atividade->num_total_tecnicos}}">
 				</div>
 				<div class="form-group">
 					<label for="num_total_artistas">Nº Total de Artistas</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="num_total_artistas" id="num_total_artistas" class="form-control" value="{{$atividade->num_total_artistas}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="num_total_artistas" id="num_total_artistas" class="form-control" value="{{$atividade->num_total_artistas}}">
 				</div>
 
 				<div class="form-group">
@@ -128,47 +128,47 @@
 
 				<div class="form-group">
 					<label for="inteiras">Inteiras</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="inteiras" id="inteiras" class="form-control" value="{{$atividade->inteira}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="inteiras" id="inteiras" class="form-control" value="{{$atividade->inteira}}">
 				</div>
 				<div class="form-group">
 					<label for="meias">Meias</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="meias" id="meias" class="form-control" value="{{$atividade->meia}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="meias" id="meias" class="form-control" value="{{$atividade->meia}}">
 				</div>
 				<div class="form-group">
 					<label for="moradores_entorno">Moradores do Entorno</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="moradores_entorno" id="moradores_entorno" class="form-control" value="{{$atividade->morador_entorno}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="moradores_entorno" id="moradores_entorno" class="form-control" value="{{$atividade->morador_entorno}}">
 				</div>
 				<div class="form-group">
 					<label for="prom">Prom</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="prom" id="prom" class="form-control" value="{{$atividade->prom}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="prom" id="prom" class="form-control" value="{{$atividade->prom}}">
 				</div>
 				<div class="form-group">
 					<label for="total_pagantes">Total Pagantes</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="total_pagantes" id="total_pagantes" class="form-control" value="{{$atividade->total_pagantes}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="total_pagantes" id="total_pagantes" class="form-control" value="{{$atividade->total_pagantes}}">
 				</div>
 				<div class="form-group">
 					<label for="convites_prod">Convites Produção</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="convites_prod" id="convites_prod" class="form-control" value="{{$atividade->convite_prod}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="convites_prod" id="convites_prod" class="form-control" value="{{$atividade->convite_prod}}">
 				</div>
 				<div class="form-group">
 					<label for="convites_apaa">Convites Apaa</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="convites_apaa" id="convites_apaa" class="form-control" value="{{$atividade->convite_apaa}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="convites_apaa" id="convites_apaa" class="form-control" value="{{$atividade->convite_apaa}}">
 				</div>
 				<div class="form-group">
 					<label for="educativo_producao">Educativo Produção</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="educativo_producao" id="educativo_producao" class="form-control" value="{{$atividade->educativo_producao}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="educativo_producao" id="educativo_producao" class="form-control" value="{{$atividade->educativo_producao}}">
 				</div>
 				<div class="form-group">
 					<label for="educativo_apaa">Educativo Apaa</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="educativo_apaa" id="educativo_apaa" class="form-control" value="{{$atividade->educativo_apaa}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="educativo_apaa" id="educativo_apaa" class="form-control" value="{{$atividade->educativo_apaa}}">
 				</div>
 				<div class="form-group">
 					<label for="atend_social_producao">Atendimento Social Produção</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="atend_social_producao" id="atend_social_producao" class="form-control" value="{{$atividade->atend_social_producao}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="atend_social_producao" id="atend_social_producao" class="form-control" value="{{$atividade->atend_social_producao}}">
 				</div>
 				<div class="form-group">
 					<label for="atend_social_apaa">Atendimento Social Apaa</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="atend_social_apaa" id="atend_social_apaa" class="form-control" value="{{$atividade->atend_social_apaa}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="atend_social_apaa" id="atend_social_apaa" class="form-control" value="{{$atividade->atend_social_apaa}}">
 				</div>
 				<div class="form-group">
 					<label for="sessao_acessivel">Sessão Acessível</label>
@@ -180,7 +180,7 @@
 				</div>
 				<div class="form-group">
 					<label for="acessibilidade_acompanhante">Acessibilidade</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" class="form-control" value="{{$atividade->acessibilidade_acompanhante}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="acessibilidade_acompanhante" id="acessibilidade_acompanhante" class="form-control" value="{{$atividade->acessibilidade_acompanhante}}">
 				</div>
 				<div class="form-group">
 					<label for="bilheteria">Bilheteria</label>
@@ -188,7 +188,7 @@
 				</div>
 				<div class="form-group">
 					<label for="porcent_bilheteria_apaa">Bilheteria Apaa</label>
-					<input type="text" onkeyup="this.value=adicionarPonto(this);" name="porcentagem_bilheteria_apaa" id="porcentagem_bilheteria_apaa" class="form-control" value="{{$atividade->porcent_bilheteria_apaa}}">
+					<input type="text" onkeyup="this.value=adicionarPonto(this);" maxlength="20" name="porcentagem_bilheteria_apaa" id="porcentagem_bilheteria_apaa" class="form-control" value="{{$atividade->porcent_bilheteria_apaa}}">
 				</div>
 
 				@if(Auth::user()->perfil == 2)
